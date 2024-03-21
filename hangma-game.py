@@ -94,12 +94,10 @@ def pick_word():
 
 word = pick_word()
 
-#get the beggining and the end of the picked word
 def evaluate_word(p):
     if p in word:
         return True
     return False
-
 
 list_correct = []
 list_wrong = []
@@ -110,15 +108,15 @@ clear_screen()
         for i,b in word[i]:
              print(b)'''
 
-#while loop here
 
 def word_constructor(i=i,word = word):
     for b in i:
         word_guessed = word[b]
         print(word_guessed)
 
-
+#while loop here
 while len(word) <= len(list_correct) or len(list_wrong) < 7:
+    #get the beggining and the end of the picked word
     word_set = word[0] + ((len(word)-2) * '_') + word[-1]
     print(word_set)
     p = str(input("guess a letter: "))
